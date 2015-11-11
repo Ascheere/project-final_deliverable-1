@@ -3,6 +3,7 @@
 ### PhpStorm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio
 
+*.iml
 
 ## Directory-based project format:
 .idea/
@@ -80,6 +81,7 @@ vendor/
 /bin/*
 !bin/console
 !bin/symfony_requirements
+/vendor/
 
 # Assets and user uploads
 /web/bundles/
@@ -91,3 +93,12 @@ vendor/
 
 # Build data
 /build/
+
+# Composer PHAR
+/composer.phar
+
+### Symfony Patch ###
+/web/bundles/
+/web/uploads/
+/web/css/
+/web/js/

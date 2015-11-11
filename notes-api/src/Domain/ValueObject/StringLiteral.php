@@ -2,42 +2,37 @@
 
 namespace Notes\Domain\ValueObject;
 
-use InvalidArgumentException;
-
 /**
  * Class StringLiteral
- * @category  PHP
- * @package   Notes\Domain\ValueObject
- * @author    donbstringham <donbstringham@gmail.com>
- * @link      http://donbstringham.us
+ * @package Notes\Domain\ValueObject
  */
 class StringLiteral
 {
-    const EMPTY_STR = '';
+	const EMPTY_STR = '';
 
-    /** @var string */
-    protected $value;
+	/** @var string */ 
+	protected $value;
 
     /**
-     * StringLiteral constructor
      * @param string $value
      */
-    public function __construct($value = self::EMPTY_STR)
-    {
-        if (!is_string($value)) {
-            throw new InvalidArgumentException(
-                __METHOD__ . '(): $value must be a string'
-            );
-        }
+	public function __construct($value = self::EMPTY_STR) // if no value is put in then it fills the value with an empty string
+	{
+		if(!is_string($value))
+		{
+			throw new \InvalidArgumentException(
+				__METHOD__ . '(): $value must be a string'
+				);
+		}
 
-        $this->value = $value;
-    }
+		$this->value = $value;
+	}
 
     /**
      * @return string
      */
-    public function __toString()
-    {
-        return $this->value;
-    }
+	public function __toString()
+	{
+		return $this->value;
+	}
 }

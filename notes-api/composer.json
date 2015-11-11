@@ -1,12 +1,12 @@
 {
-  "name": "donbstringham/notes-api",
-  "description": "Notes API Project for CS3620",
+  "name": "Ascheere/notes-api",
+  "description": "Notes Api project for cs3620",
   "minimum-stability": "stable",
   "license": "proprietary",
   "authors": [
     {
-      "name": "Don B. Stringham",
-      "email": "donbstringham@gmail.com"
+      "name": "Andrew C Scheerenberger",
+      "email": "onecontactemail@yahoo.com"
     }
   ],
   "require-dev": {
@@ -21,8 +21,9 @@
     "silex/silex": "v1.3.4"
   },
   "autoload": {
-    "psr-4": {
+    "psr-4":{
       "Notes\\": "src/"
     }
+
   }
 }
